@@ -9,7 +9,7 @@ class NewsContainer extends React.Component {
   constructor(props){
     super(props)
     this.state = {
-      newsArticles: []
+      news: []
     }
   }
 
@@ -18,7 +18,7 @@ class NewsContainer extends React.Component {
 
   componentDidMount(){
     // once mounted, set state with data from backend (NEWSENDPOINT)
-    this.getNews().then(data => this.setState({newsArticles: data}))
+    this.getNews().then(data => this.setState({news: data}))
   }
 
   //async, await to fetch news articles from database
@@ -36,7 +36,7 @@ class NewsContainer extends React.Component {
     return (
       <div className="news-container">
         <h1>News Container</h1>
-        <NewsList newsArticles={this.state.newsArticles}/>
+        <NewsList news={this.state.news}/>
       </div>
     )
   }

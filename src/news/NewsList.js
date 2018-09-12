@@ -1,16 +1,16 @@
 import React from 'react'
-import NewsArticle from './NewsArticle'
+import News from './News'
 
 const NewsList = (props) => {
 
   // map through newsArticles props to render each <NewsArticle />
-  const mapNewsArticles = () => props.newsArticles.map(newsArticle => <NewsArticle key={newsArticle.id} newsArticle={newsArticle} />)
+  const mapNews = () => props.news.map(news => <News key={news.id} news={news} />)
 
 
   return (
     <div className="news-list">
       <h1>News List</h1>
-      {mapNewsArticles()}
+      {mapNews()}
     </div>
   )
 
