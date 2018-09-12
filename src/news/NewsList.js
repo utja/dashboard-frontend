@@ -3,9 +3,16 @@ import NewsArticle from './NewsArticle'
 
 const NewsList = (props) => {
 
-  // map through props to render each news article
+  // map through newsArticles props to render each <NewsArticle />
+  const mapNewsArticles = () => props.newsArticles.map(newsArticle => <NewsArticle key={newsArticle.id} newsArticle={newsArticle} />)
 
-  return <h1>Hello From News List</h1>
+
+  return (
+    <div className="news-list">
+      <h1>News List</h1>
+      {mapNewsArticles()}
+    </div>
+  )
 
 }
 
