@@ -5,7 +5,8 @@ const Weather = (props) => {
 
   return(
     <div className="weather">
-      <h1>Weather</h1>
+      <h1>{props.weather.weather}</h1>
+      <h2>Temperature: {props.weather.temperature}</h2>
     </div>
   )
 }
